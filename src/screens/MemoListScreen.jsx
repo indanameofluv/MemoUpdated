@@ -11,7 +11,7 @@ export default function MemoListScreen(){
 
       <AppBar />    
       <MemoList />
-      <CircleButton name='plus' />
+      <CircleButton name='plus' size={32} color='white' />
     </View>
     );
 }
