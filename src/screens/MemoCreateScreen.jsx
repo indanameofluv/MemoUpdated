@@ -1,20 +1,23 @@
 import React from "react";
 import { 
-    View, Text, StyleSheet, TextInput, KeyboardAvoidingView,
+    View, Text, StyleSheet, TextInput, Keyboard,
 } from 'react-native';
 
 import AppBar from "../components/AppBar";
 import CircleButton from "../components/CircleButton";
+import KeyboardSafeView from "../components/KeyboardSafeView";
+
+                //onSubmitEditingはリターンキーを押すとキーボードが引っ込むよ
 
 export default function MemoCreateScreen(){
     return (
-        <KeyboardAvoidingView style={styles.container} behavior='height'>
+        <KeyboardSafeView style={styles.container}>
             <AppBar />
             <View style={styles.inputContainer}>
-                <TextInput value="" multiline style={styles.input} />
+                <TextInput value="" multiline style={styles.input} onSubmitEditing={Keyboard.dismiss} />
             </View>
             <CircleButton name='check' size={32} color='white'  />
-        </KeyboardAvoidingView>    
+        </KeyboardSafeView>    
     );
 }
 
