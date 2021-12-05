@@ -15,7 +15,7 @@ export default function CircleButton(props){
 
 CircleButton.propTypes = {
     style: shape(),
-    name: oneOf(['plus', 'edit-2']).isRequired,
+    name: oneOf(['plus', 'edit-2', 'check']).isRequired,
 }
 
 CircleButton.defaultprops = {
@@ -39,9 +39,5 @@ const styles = StyleSheet.create({
         shadowRadius: 8,
         elevation: 8,
       },
-      circleButtonLabel:{
-        color: '#ffffff',
-        fontSize: 40,
-        lineHeight: 40,
-      },
+    
 });

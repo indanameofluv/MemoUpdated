@@ -8,11 +8,10 @@ import CircleButton from '../components/CircleButton';
 export default function MemoListScreen(){
     return (
         <View style={styles.container}>
-
-      <AppBar />    
-      <MemoList />
-      <CircleButton name='plus' size={32} color='white' />
-    </View>
+            <AppBar />    
+            <MemoList />
+            <CircleButton name='plus' size={32} color='white' />
+        </View>
     );
 }
 
