@@ -14,7 +14,7 @@ export default function MemoEditScreen(){
             <View style={styles.inputContainer}>
                 <TextInput value="買い物リスト" multiline style={styles.input} onSubmitEditing={Keyboard.dismiss} />
             </View>
-            <CircleButton name='check' size={32} color='white'  />
+            <CircleButton name='check' size={32} color='white' />
         </KeyboardSafeView>    
     );
 }
