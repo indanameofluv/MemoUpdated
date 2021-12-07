@@ -1,22 +1,24 @@
+import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import { 
     View, Text, StyleSheet, TextInput, Keyboard,
 } from 'react-native';
 
-import AppBar from "../components/AppBar";
 import CircleButton from "../components/CircleButton";
 import KeyboardSafeView from "../components/KeyboardSafeView";
 
                 //onSubmitEditingはリターンキーを押すとキーボードが引っ込むよ
 
-export default function MemoCreateScreen(){
+export default function MemoCreateScreen(props){
+    const { navigation } = props;
     return (
         <KeyboardSafeView style={styles.container}>
-            <AppBar />
             <View style={styles.inputContainer}>
                 <TextInput value="" multiline style={styles.input} onSubmitEditing={Keyboard.dismiss} />
             </View>
-            <CircleButton name='check' size={32} color='white'  />
+            <CircleButton name='check' size={32} color='white'  
+                onPress={() => { navigation.goBack(); }}
+            />
         </KeyboardSafeView>    
     );
 }
